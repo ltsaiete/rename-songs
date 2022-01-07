@@ -19,7 +19,7 @@ app.post("/", upload.single("song"), async (request, response) => {
 
   const {
     common: { title, track },
-  } = await mm.parseFile(resolve(__dirname, "files", file.filename));
+  } = await mm.parseFile(resolve(__dirname, '..',"files", file.filename));
 
   const newName = track.no + ". " + title + extname(file.filename);
   const parsedName = newName.replace(/[^A-Za-z0-9\.]/g, "_");

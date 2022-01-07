@@ -4,8 +4,8 @@ import { resolve } from "path";
 
 function renameFile(oldName: string, newName: string) {
   rename(
-    resolve(__dirname, "files", oldName),
-    resolve(__dirname, "files", newName),
+    resolve(__dirname, "..", "..", "files", oldName),
+    resolve(__dirname, "..", "..", "files", newName),
     (err) => {
       if (err) console.log(err);
     }
